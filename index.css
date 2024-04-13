@@ -44,6 +44,9 @@ a {
 h1 {
     margin: 0;
     color: #000000; /* Green heading */
+    text-align: center;
+    padding: 90px -90px -90px 30px;
+   
 }
 
 .container {
@@ -62,6 +65,72 @@ caption {
     color: #4CAF50; /* Green caption */
 }
 
+/*  */
+/* fooooooooooooooooooooooooooorm */
+/* Form */
+form {
+    max-width: 1000px;
+    margin: px;
+    padding: 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+placeholde
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    display: block; /* Labels are displayed as blocks (one below the other) */
+    margin-bottom: 5px; /* Add some space between labels */
+    text-align: center;
+}
+
+
+
+select {
+    width: 100%; /* Select dropdown takes full width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 10px; /* Add some space between input fields */
+    border: 7px solid #ccc; /* Add a border */
+    border-radius: 40px; /* Add some border radius */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    background-color: #ffffff; /* Light gray background color */
+}
+
+p {
+    display: block; /* Labels are displayed as blocks (one below the other) */
+    margin-bottom: 5px; /* Add some space between labels */
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 7px solid #ccc;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green submit button */
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green hover color */
+}
+
 footer {
     background-color: #333333; /* Dark gray footer */
     color: #fff; /* White text */
@@ -71,6 +140,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    opacity: 70%;
+    text-shadow: black;
 }
 
 .footer-links {
@@ -88,6 +159,7 @@ footer {
 
 .social-media-links a:hover {
     text-decoration: underline;
+    padding: 0;
 }
 
 .contact-link {
@@ -124,3 +196,4 @@ footer {
 .employee-info div {
     margin-bottom: 5px; /* Add spacing between lines of information */
 }
+
