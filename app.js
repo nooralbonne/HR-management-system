@@ -80,14 +80,37 @@ Employee.prototype.render = function() {
 };
 
 function staticEmployees() {
-    new Employee(generateUniqueEmployeeId(), "Ghazi Samer", "Administration", "Senior", "https://th.bing.com/th/id/OIP.lrODV181gEQh9tI4_Og2zwHaE8?w=274&h=183&c=7&r=0&o=5&pid=1.7");
-    new Employee(generateUniqueEmployeeId(), "Lana Ali", "Finance", "Senior", "https://th.bing.com/th/id/OIP.XGyjZfRlQbqkDkackGAlPAHaF7?pid=ImgDet&w=474&h=379&rs=1");
-    new Employee(generateUniqueEmployeeId(), "Tamara Ayoub", "Marketing", "Senior", "https://th.bing.com/th/id/OIP.RI7shrzeK98cE9ttIQ0iRwHaIV?pid=ImgDet&w=189&h=212&c=7");
-    new Employee(generateUniqueEmployeeId(), "Safi Walid", "Administration", "Mid-Senior", "https://media.licdn.com/dms/image/D4D03AQEVghLlYFZKhg/profile-displayphoto-shrink_800_800/0/1668626836564?e=2147483647&v=beta&t=iGVtkcIbgaDSlZjwchxP9h1sK0TUpw65IM1AZixEUvc");
-    new Employee(generateUniqueEmployeeId(), "Omar Zaid", "Development", "Senior", "https://media.licdn.com/dms/image/C4E03AQEo1lRhJ7Z-sA/profile-displayphoto-shrink_800_800/0/1599703558735?e=2147483647&v=beta&t=-I2t8aRGK47tTmx5aH7MzFDtvR94CpkoZ3LMBWSNPPc");
-    new Employee(generateUniqueEmployeeId(), "Rana Saleh", "Development", "Junior", "https://static1.personality-database.com/profile_images/639aa69601b4483c8b4c43d4378eeaef.png");
-    new Employee(generateUniqueEmployeeId(), "Hadi Ahmad", "Finance", "Mid-Senior", "https://www.snapfi.com/wp-content/uploads/2019/01/Jimmy-Garcia-500-bio-pic-300x300.jpg");
+    // Clear the sections before adding static data
+    administrationSection.innerHTML = '';
+    marketingSection.innerHTML = '';
+    developmentSection.innerHTML = '';
+    financeSection.innerHTML = '';
 
+    const staticEmployeesData = [
+        { fullName: "Ghazi Samer", department: "Administration", level: "Senior", imageUrl: "https://th.bing.com/th/id/OIP.lrODV181gEQh9tI4_Og2zwHaE8?w=274&h=183&c=7&r=0&o=5&pid=1.7" },
+        { fullName: "Lana Ali", department: "Finance", level: "Senior", imageUrl: "https://th.bing.com/th/id/OIP.XGyjZfRlQbqkDkackGAlPAHaF7?pid=ImgDet&w=474&h=379&rs=1" },
+        { fullName: "Tamara Ayoub", department: "Marketing", level: "Senior", imageUrl: "https://th.bing.com/th/id/OIP.RI7shrzeK98cE9ttIQ0iRwHaIV?pid=ImgDet&w=189&h=212&c=7" },
+        { fullName: "Safi Walid", department: "Administration", level: "Mid-Senior", imageUrl: "https://media.licdn.com/dms/image/D4D03AQEVghLlYFZKhg/profile-displayphoto-shrink_800_800/0/1668626836564?e=2147483647&v=beta&t=iGVtkcIbgaDSlZjwchxP9h1sK0TUpw65IM1AZixEUvc" },
+        { fullName: "Omar Zaid", department: "Development", level: "Senior", imageUrl: "https://media.licdn.com/dms/image/C4E03AQEo1lRhJ7Z-sA/profile-displayphoto-shrink_800_800/0/1599703558735?e=2147483647&v=beta&t=-I2t8aRGK47tTmx5aH7MzFDtvR94CpkoZ3LMBWSNPPc" },
+        { fullName: "Rana Saleh", department: "Development", level: "Junior", imageUrl: "https://static1.personality-database.com/profile_images/639aa69601b4483c8b4c43d4378eeaef.png" },
+        { fullName: "Hadi Ahmad", department: "Finance", level: "Mid-Senior", imageUrl: "https://www.snapfi.com/wp-content/uploads/2019/01/Jimmy-Garcia-500-bio-pic-300x300.jpg" }
+    ];
+
+    for (const employeeData of staticEmployeesData) {
+        // Check if an employee with the same details already exists
+        const existingEmployee = allEmployees.find(emp => (
+            emp.fullName === employeeData.fullName &&
+            emp.department === employeeData.department &&
+            emp.level === employeeData.level &&
+            emp.imageUrl === employeeData.imageUrl
+        ));
+        if (!existingEmployee) {
+            // If no existing employee found, create a new one
+            new Employee(generateUniqueEmployeeId(), employeeData.fullName, employeeData.department, employeeData.level, employeeData.imageUrl);
+        }
+    }
+
+    renderAll(); // Render all employees after static data is added
 }
 
 staticEmployees();
