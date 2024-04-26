@@ -35,6 +35,47 @@ a {
     padding: 10px;
 }
 
+/* New styles for the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 12px; /* Padding for content */
+    text-align: center; /* Center-align text */
+}
+
+th {
+    background-color: #45a049; /* Dark green header background */
+    color: white; /* Header text color */
+    font-weight: bold; /* Bold header text */
+    text-transform: uppercase; /* Uppercase header text */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+tr:hover {
+    background-color: #e5e5e5; /* Hover row background color */
+}
+
+caption {
+    font-size: 16px; /* Caption font size */
+    font-weight: bold; /* Bold caption text */
+    margin-bottom: 20px; /* Spacing between caption and table */
+    color: #45a049; /* Caption text color */
+}
+
 .logo-container img {
     width: 50px;
     margin-right: 10px;

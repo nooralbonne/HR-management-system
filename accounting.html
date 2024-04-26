@@ -8,15 +8,10 @@
     <meta http-equiv="refresh" content="100" url="https://web.telegram.org/k/">
     <title>HR-management-system</title>
 
-
-    <link rel="stylesheet" href="index.css" /> 
-    <script src="app.js"></script>
-    
     <div class="navbar">
         <a href="index.html">INDEX</a>
         <a href="accounting.html">ACCOUNTING</a>
     </div>
-   
     <br>
 
      <div class="container">
@@ -24,19 +19,74 @@
             <img src="https://th.bing.com/th/id/OIP.a3lYwQ2cV6fTKJOLQaIGSAHaHa?rs=1&pid=ImgDetMain"
                 alt="logo for HR-management-system">
             <h1>HR Management System</h1>
-        </div>
+        </div>   
     <hr> 
 </head>
-<body>
+<!-- ====================================================================================== -->
 
+<body>
+<main>
+
+    <!-- TABLE -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th># of Employees</th>
+                <th>Total Salary</th>
+                <th>Average Salary</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Administration</td>
+                <td id = "adminNum"></td>
+                <td id = "adminSal"></td>
+                <td id = "adminAvg"></td>
+            </tr>
+
+            <tr>
+                <td>Markiting</td>
+                <td id = "markNum"></td>
+                <td id = "markSal"></td>
+                <td id = "markAvg"></td>
+            </tr>
+
+            <tr>
+                <td>Development</td>
+                <td id = "devNum"></td>
+                <td id = "devSal"></td>
+                <td id = "devAvg"></td>
+            </tr>
+
+            <tr>
+                <td>Finance</td>
+                <td id = "finNum"></td>
+                <td id = "finSal"></td>
+                <td id = "finAvg"></td>
+            </tr>
+
+            <tr>
+                <td>Total</td>
+                <td id = "totalN"></td>
+                <td id = "totalS"></td>
+                <td id = "totalA"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
+
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-links">
         <div class="social-media-links">
-            <a href="https://www.facebook.com"><i class="fab fa-facebook-square">facebook</i></a>
-            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i>twitter</a>
-            <a href="https://www.instagram.com"><i class="fab fa-instagram-square"></i>instagram</a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-square"> facebook</i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i> twitter</a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram-square"></i> instagram</a>
         </div>
         <div class="contact-link">
             <a href="mailto:nooralbonne@hotmail.com">Contact Me</a>
@@ -46,4 +96,8 @@
         <p>&copy; 2024 Noor Albonne. All Rights Reserved.</p>
     </div>
 </footer>
-</html>
+  
+ <link rel="index.html" href="index.html" /> 
+  <link rel="stylesheet" href="index.css" /> 
+  <script src="accounting.js"></script>
+  </html>
