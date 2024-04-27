@@ -110,7 +110,6 @@ function staticEmployees() {
         }
     }
 
-    renderAll(); // Render all employees after static data is added
 }
 
 staticEmployees();
